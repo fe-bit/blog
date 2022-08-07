@@ -1,0 +1,25 @@
+{% load static%}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block title%} {% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.0-dist/css/bootstrap.min.css' %}">
+
+  </head>
+  <body>
+      {% include 'navigation.html' %}
+      {% block content %}{% endblock %}
+      {% include 'see_related_posts.html' %}
+      {% include 'see_latest_posts.html' %}
+      {% include 'footer.html' %}
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.2.0-dist/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
