@@ -25,5 +25,4 @@ class Post(models.Model):
         return "post/%s" % self.template_name
 
     def __str__(self):
-        s = str(self.slug)
-        return s.replace("-", " ")
+        return self.title
