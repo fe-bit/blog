@@ -1,0 +1,98 @@
+{% load static%}
+<h3 class="text-center">See related posts</h3>
+
+<!-- Hier können ähnliche Posts angezeigt werden.
+    Ähnlich ist ein Post, wenn er Tags enthält, die dafür relevant sind.
+    Umso mehr gleiche Tags ein Post enthält, desto ähnlicher und höher in der Liste steht er.
+
+    Alternativ kann das ganze auch anders gelöst werden, 
+        indem das in den Posts selbst gespeichert wird, mit welchen anderen Posts dieser assoziiert werden soll.
+
+    Option 1: automatisch
+    Option 2: manuell
+
+    Beide Optionen haben Berechtigung
+    Beste Lösung ist eine Mischlösung: Erst werden die manuellen gecheckt und dann die automatischen.
+    Insgesamt werden nur eine Anzahl von x Posts zugelassen
+-->
+<div class="slide-container-swiper" id="related-posts">
+<div class="slide-content">
+    <div class="card-wrapper swiper-wrapper">
+        <!--Card Swiper slide is one content-->
+        <div class="card-swiper-slide">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">Lorem ipsum text</p>
+                    <button class="button">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Card Swiper slide is one content-->
+        <div class="card-swiper-slide">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">Lorem ipsum text</p>
+                    <button class="button">View More</button>
+                </div>
+            </div>
+        </div>
+        <!--Card Swiper slide is one content-->
+        <div class="card-swiper-slide">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">Lorem ipsum text</p>
+                    <button class="button">View More</button>
+                </div>
+            </div>
+        </div>
+        <!--Card Swiper slide is one content-->
+        <div class="card-swiper-slide">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">Lorem ipsum text</p>
+                    <button class="button">View More</button>
+                </div>
+            </div>
+        </div>
+        <!--Card Swiper slide is one content-->
+        <div class="card-swiper-slide">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">Lorem ipsum text</p>
+                    <button class="button">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+</div>

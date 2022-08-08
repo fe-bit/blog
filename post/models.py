@@ -20,7 +20,8 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     tags = models.ManyToManyField(Tag, blank=True)
     title = models.CharField(max_length=200, null=True, blank=True)
-
+    # image associated with the post
+    
     def get_template_name(self):
         return "post/%s" % self.template_name
 

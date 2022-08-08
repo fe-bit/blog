@@ -1,7 +1,7 @@
 {% load static%}
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <title>{% block title%} {% endblock %}</title>
     <!-- Required meta tags -->
@@ -10,16 +10,20 @@
 
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="{% static 'bootstrap-5.2.0-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'main.css'%}">
 
   </head>
-  <body>
-      {% include 'navigation.html' %}
+  <body class="d-flex flex-column h-100">
+      {% include 'partials/navigation.html' %}
       {% block content %}{% endblock %}
-      {% include 'see_related_posts.html' %}
-      {% include 'see_latest_posts.html' %}
-      {% include 'footer.html' %}
+      
+      {% include 'partials/footer.html' %}
     <!-- Bootstrap JavaScript Libraries -->
     <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'bootstrap-5.2.0-dist/js/bootstrap.min.js' %}"></script>
+    {% block js %}
+
+    {% endblock %}
+    
   </body>
 </html>

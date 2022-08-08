@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% block post-content %}{% endblock %}
+
+
+{% include 'partials/see_related_posts.html' %}
+{% include 'partials/see_latest_posts.html' %}
+{% endblock%}
+
+
+{% block js %}
+<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/swiper-script.js' %}"></script>
+
+{% endblock %}
