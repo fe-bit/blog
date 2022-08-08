@@ -7,6 +7,9 @@ class Tag(models.Model):
     title = models.CharField(max_length=100, unique=True, primary_key=True)
     #related_tags = models.ManyToManyField(Tag, blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Category(models.Model):
     title = models.CharField(max_length=100, unique=True, primary_key=True)
@@ -21,7 +24,7 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     title = models.CharField(max_length=200, null=True, blank=True)
     # image associated with the post
-    
+
     def get_template_name(self):
         return "post/%s" % self.template_name
 
