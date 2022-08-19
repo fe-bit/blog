@@ -23,6 +23,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     tags = models.ManyToManyField(Tag, blank=True)
     title = models.CharField(max_length=200, null=True, blank=True)
+    description = models.CharField(max_length=250, null=True, blank=True)
     # image associated with the post
 
     def get_template_name(self):
@@ -30,3 +31,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("detail-post", kwargs={"slug": self.slug})

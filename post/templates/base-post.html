@@ -1,20 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css%}
+<link rel="stylesheet" href="{% static 'js/node_modules/swiper/swiper-bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/custom-swiper.css' %}">
+<link rel="stylesheet" href="{% static 'css/see-latest-post.css' %}">
+<link rel="stylesheet" href="{% static 'css/base-post.css' %}">
+{% endblock %}
+
 {% block content %}
-    <div class="container">
-        <h1 class="text-center">{{post.title}}</h1>
-        <h6 class="text-center">created at {{post.created_at}}. {% if post.last_updated != post.created_at %}Last update on {{post.last_updated}} {%endif%}</h6>
+    <div class="container rounded-1" style="background-color:white;">
+    <div class="container py-4">
+        <h1 class="text-center" id="post-title">{{post.title}}</h1>
+        <h6 class="text-center">created at {{post.created_at|date:"d.m.Y"}}. {% if post.last_updated != post.created_at %}Last update on {{ post.last_updated|date:"d.m.Y" }} {%endif%}</h6>
 
     {% block post-content %}{% endblock %}
 
     </div>
-{% include 'partials/see_related_posts.html' %}
+{% comment %} {% include 'partials/see_related_posts.html' %} {% endcomment %}
 {% include 'partials/see_latest_posts.html' %}
-{% endblock%}
+</div>
+{% endblock content %}
 
 
 {% block js %}
-<script src="{% static 'js/node_modules/swiper/swiper-bundle.min.js' %}"></script>
-    <script src="{% static 'js/swiper-script.js' %}"></script>
+<script src="{% static 'js/node_modules/swiper/swiper-bundle.js' %}"></script>
+<script src="{% static 'js/swiper-script.js' %}"></script>
 
 {% endblock %}

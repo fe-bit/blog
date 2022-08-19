@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from .models import Post, Tag, Category
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, get_list_or_404
 
 
 def detail_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    context = {"post": post}
+    latest_posts = Post.objects.all().order_by("-created_at")[:4]
+    # .exclude(slug=post.slug)
+    context = {
+        "post": post,
+        "latest_posts": latest_posts,
+    }
     return render(request=request, template_name=post.get_template_name(), context=context)
 
 

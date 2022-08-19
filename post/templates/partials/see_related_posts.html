@@ -1,4 +1,5 @@
 {% load static%}
+<section class="related-post-section container">
 <h3 class="text-center">See related posts</h3>
 
 <!-- Hier können ähnliche Posts angezeigt werden.
@@ -16,83 +17,30 @@
     Insgesamt werden nur eine Anzahl von x Posts zugelassen
 -->
 <div class="slide-container-swiper" id="related-posts">
-<div class="slide-content">
+<div class="slide-content slide">
     <div class="card-wrapper swiper-wrapper">
         <!--Card Swiper slide is one content-->
-        <div class="card-swiper-slide">
+        {% for i in n %}
+        <div class="card-swiper-slide swiper-slide">
             <div class="image-content">
                 <span class="overlay"></span>
                 <div class="card-image">
-                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
+                    {% comment %} <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img"> {% endcomment %}
                 </div>
                 <div class="card-content">
-                    <h2 class="name">David Dell</h2>
-                    <p class="description">Lorem ipsum text</p>
+                    <h2 class="name">Post 1</h2>
+                    {% comment %} <p class="description">Post Description comes here and is quite long...</p> {% endcomment %}
                     <button class="button">View More</button>
                 </div>
             </div>
         </div>
 
-        <!--Card Swiper slide is one content-->
-        <div class="card-swiper-slide">
-            <div class="image-content">
-                <span class="overlay"></span>
-                <div class="card-image">
-                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h2 class="name">David Dell</h2>
-                    <p class="description">Lorem ipsum text</p>
-                    <button class="button">View More</button>
-                </div>
-            </div>
-        </div>
-        <!--Card Swiper slide is one content-->
-        <div class="card-swiper-slide">
-            <div class="image-content">
-                <span class="overlay"></span>
-                <div class="card-image">
-                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h2 class="name">David Dell</h2>
-                    <p class="description">Lorem ipsum text</p>
-                    <button class="button">View More</button>
-                </div>
-            </div>
-        </div>
-        <!--Card Swiper slide is one content-->
-        <div class="card-swiper-slide">
-            <div class="image-content">
-                <span class="overlay"></span>
-                <div class="card-image">
-                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h2 class="name">David Dell</h2>
-                    <p class="description">Lorem ipsum text</p>
-                    <button class="button">View More</button>
-                </div>
-            </div>
-        </div>
-        <!--Card Swiper slide is one content-->
-        <div class="card-swiper-slide">
-            <div class="image-content">
-                <span class="overlay"></span>
-                <div class="card-image">
-                    <img src="{% static 'img/example.jpeg' %}" alt="#" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h2 class="name">David Dell</h2>
-                    <p class="description">Lorem ipsum text</p>
-                    <button class="button">View More</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
+        {% endfor %}        
     </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination swiper-pagination-space"></div>
+        
 </div>
 </div>
+</section>

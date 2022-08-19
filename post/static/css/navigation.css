@@ -1,0 +1,13 @@
+#navigation a {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 3vh;
+    padding: 70px 5;
+    color: rgb(139, 139, 139);
+}
+
+#brand-text {
+    font-family: 'Brush Script MT', cursive !important;
+    font-size: 5vh !important;
+    color: black !important;
+}

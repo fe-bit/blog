@@ -1,37 +1,29 @@
-<div class="container" id="latest-posts">
+{% if latest_posts %}
+<div class="container p-5" id="latest-posts">
     <h3 class="text-center">See latest Posts</h3>
 
     <div id="latest-posts-carousel">
         <div class="row">
+            {% for post in latest_posts %}
             <div class="col-sm-3">
-                <div class="card">                                        
+                <div class="card">   
+                    {% comment %} <img src="..." class="card-img-top" alt="...">                                    {% endcomment %}
                     <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <p class="card-text">Text</p>
+                        <a href="{% url 'detail-post' slug=post.slug %}" class="text-dark text-decoration-none text-center"><h4 class="card-title">{{post.title}}</h4></a>
+                        {% if post.description %}
+                        <p class="card-text latest-post-description">{{post.description}}</p>
+                        {% endif %}
                     </div>
+                
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card">                                        
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <p class="card-text">Text</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">                                        
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <p class="card-text">Text</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}            
         </div>
         
     </div>
 
 </div>
+{% endif %}
 
 <!--Hier kann ein eigener widget zum Einsatz kommen, der die neuesten Posts zurückgibt
 Über diese kann dann iteriert werden und eine seitliche Liste angezeigt werden

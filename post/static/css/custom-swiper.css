@@ -1,0 +1,97 @@
+.slide-content {
+    overflow: hidden;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #FFF;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    z-index: 2;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070F4;
+    border-radius: 25px;
+}
+
+
+.card-image {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: #FFF;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    color: black;
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
+    color: #333;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: black;
+    padding: 8px 16px;
+    background-color: white;
+    border-radius: 6px;
+    transition: all 0.3 ease;
+}
+
+.button:hover {
+    background: #256DF2;
+}
+
+.swiper-navBtn {
+    color: black;
+    transition: color 0.3 ease;
+}
+
+.swiper-navBtn:hover {
+    color: blue;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 50px;
+
+}
+
+.swiper-button-prev {
+    position: relative;
+    top: 50%;
+}
